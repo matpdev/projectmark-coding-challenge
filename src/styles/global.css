@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --Blue-Highlight: #2462d1;
+  --line-padding: 5.25px;
+}
+
+* {
+  font-family: "Archivo" !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #edf2f7 !important;
+  padding: 10px;
+}
+
+.cardBox {
+  height: max-content;
+  width: 100% !important;
+  border-radius: 21px;
+  background: var(--White, #fff);
+}
+
+.chooseType {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* SELECT BOX */
+
+#box {
+  position: relative;
+  width: 210px;
+  height: 57px;
+  padding: 20px;
+  border-radius: 10.5px;
+  top: 0px;
+  left: 10px;
+  border: 2px solid rgb(177, 177, 177);
+  -webkit-border-radius: 10.5px;
+  -moz-border-radius: 10.5px;
+  -ms-border-radius: 10.5px;
+  -o-border-radius: 10.5px;
+}
+
+#box.choosed:after {
+  content: "";
+  border-bottom: 2px solid var(--Blue-Highlight);
+  border-right: 2px solid var(--Blue-Highlight);
+  background-color: white;
+  border-radius: 0 0px 3px 0;
+  position: absolute;
+  left: 95px;
+  bottom: -11px;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  -webkit-border-radius: 0 0px 3px 0;
+  -moz-border-radius: 0 0px 3px 0;
+  -ms-border-radius: 0 0px 3px 0;
+  -o-border-radius: 0 0px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.choose,
+.choosed {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0px 10px;
+}
+
+.background {
+  position: relative;
+}
+
+.choosed {
+  border-color: blue !important;
+}
+
+.choose {
+  color: var(--Gray-800, #2d3748);
+}
+
+/* SELECT BOX */
+
+/* HEADER */
+.headerText {
+  color: var(--Gray-800, #2d3748);
+  text-align: center;
+  font-family: Archivo;
+  font-size: 26.25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34.2px;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 99px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 13px;
+}
+
+.header .next {
+  padding: 13px 21px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 34px;
+  background: var(--Blue-Highlight, #2462d1);
+  color: white;
+  cursor: pointer;
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+}
+
+.step p {
+  color: var(--Gray-800, #2d3748);
+  text-align: center;
+  font-family: Archivo Narrow;
+  font-size: 10.5px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.step .stepbox {
+  width: 50px;
+  height: 50px;
+  border-radius: 17.5px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 17.5px;
+  border: 1px solid #bfcfe0;
+  background: var(--White, #fff);
+}
+
+.step.active .stepbox {
+  background: var(--Gray-800, #2d3748);
+  color: white;
+}
+
+/* HEADER */
+
+/* PIPELINES */
+
+.pipeGroup {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.pipeGroup .line {
+  width: 222px;
+  height: 558px;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+.line p {
+  margin: calc(9px + var(--line-padding));
+  color: var(--S-3-Darker, #003a66);
+  font-family: Archivo;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: var(--line-padding);
+}
+
+.switch {
+  border-radius: 10.5px;
+  width: 114px;
+  height: 21.985px;
+  flex-shrink: 0;
+  margin: 0 calc(9px + var(--line-padding));
+}
+
+.switchSlider {
+  border-radius: 10.5px;
+  background: var(--S-1, #dabfff);
+  width: 42px;
+  height: 21.985px;
+  flex-shrink: 0;
+}
+
+.lineBox {
+  width: calc(100% - 18px);
+  height: 174.938px;
+  flex-shrink: 0;
+  border-radius: 10.5px;
+  margin: 9px;
+}
+
+.gradientEnd {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 50.13%);
+}
+
+.planBox {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* PIPELINES */
+
+@media (max-width: 767.98px) {
+  .steps {
+    gap: 5px;
+  }
+
+  .headerText {
+    font-size: 20px;
+  }
+
+  .header .next {
+    padding: 8px 17px;
+    gap: 10px;
+    font-size: 11px;
+  }
+
+  .pipeGroup .line {
+    height: 348px;
+  }
+}
