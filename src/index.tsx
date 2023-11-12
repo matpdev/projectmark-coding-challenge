@@ -17,7 +17,6 @@ root.render(
       <CssBaseline />
       <Header></Header>
       <App />
-      {/* <Header></Header> */}
     </ThemeProvider>
   </PlanProvider>
 );
